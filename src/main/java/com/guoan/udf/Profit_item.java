@@ -116,7 +116,7 @@ public class Profit_item extends UDF{
 	
 	public static void main(String[] args) {
 		Profit_item pi = new Profit_item();
-		Double evaluate6 = pi.evaluate(12.5,2,"yes","",0,"self",9.970000000000001,0,"",0,0,0);
+		Double evaluate6 = pi.evaluate(12.5,2,"yes","",0,"self",9.970000000000001,0,"",0,0,0,"");
 		
 		System.out.println(evaluate6);
 		
