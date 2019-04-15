@@ -16,12 +16,12 @@ public class Profit_item extends UDF{
 			String joint_ims,String order_tag3, int teptag1,String business_type,
 			double cost_price , double c_cost_price, 
 			String contract_method, double  contract_percent , double contract_price ,
-			double proration_seller_price)  {
+			double proration_seller_price, String department_id)  {
 		
 		double profit = 0.0;
 		try{
-			//是否优易订单
-			if(joint_ims != null && "yes".equals(joint_ims)){
+			//是否优易订单[新增事业群为(国安优易)]
+			if(joint_ims != null && "yes".equals(joint_ims) && "8ac28b935fed0bc8015fed4c76f60018".equals(department_id)){
 				//优易
 				//优易订单，若一条计单下的明细商品在当天日销售表中，有一个未找到，则成本不计算，利润不计算，订单标签order_tag3为0；
 				//过账支付订单，收款表类型为posting的，利润为0，订单标签order_tag3为2;
